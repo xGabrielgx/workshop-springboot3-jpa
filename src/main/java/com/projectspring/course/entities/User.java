@@ -1,5 +1,6 @@
 package com.projectspring.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -23,6 +24,11 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+
+    // jsonIgnora para não ficar em looping carregando vários pedidos e entrando em looping com clientes
+    // Lazy loading o JPA não carrega o objeto de assiação para muitos *)
+
+    @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
