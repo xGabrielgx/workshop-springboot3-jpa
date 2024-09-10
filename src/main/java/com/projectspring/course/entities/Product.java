@@ -24,7 +24,12 @@ public class Product implements Serializable {
     private String imgUrl;
 
     // impede do JPA tentar interpretar (@Transient)
-    @Transient
+    // JoinTable para criar a terceira tabela no banco de dados
+    // joinColumns para juntar as duas tabelas usa o @JoinColumn pra tabela de produtos e o inverseJoinColumns pra tabela de Categoria
+    @ManyToMany
+    @JoinTable(name = "tb_product_category",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
     public Product() {

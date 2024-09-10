@@ -1,5 +1,6 @@
 package com.projectspring.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -20,7 +21,10 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
-    @Transient
+
+    // coloca o nome da coleção da outra classe no caso product
+    @JsonIgnore
+    @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
 
     public Category(){
