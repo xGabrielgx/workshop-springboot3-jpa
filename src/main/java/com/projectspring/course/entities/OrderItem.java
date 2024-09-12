@@ -35,6 +35,7 @@ public class OrderItem implements Serializable {
         this.price = price;
     }
 
+    // para não dar looping infinito
     @JsonIgnore
     public Order getOrder() {
         return id.getOrder();
