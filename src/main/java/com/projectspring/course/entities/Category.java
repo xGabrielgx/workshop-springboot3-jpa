@@ -22,7 +22,7 @@ public class Category implements Serializable {
     private String name;
 
 
-    // coloca o nome da coleção da outra classe no caso product
+    // coloca o nome da coleção da outra classe no caso product onde lá tem a coleção de categorias
     @JsonIgnore
     @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
