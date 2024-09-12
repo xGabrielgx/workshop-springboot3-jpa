@@ -38,6 +38,10 @@ public class Order implements Serializable {
     @OneToMany(mappedBy = "id.order")
     private Set<OrderItem> items = new HashSet<>();
 
+    // para relação 1 para 1 o mesmo ID será tanto para pagamento como pra pedido onde precisa do cascade
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
+
     public Order() {
 
     }
@@ -76,16 +80,24 @@ public class Order implements Serializable {
         }
     }
 
-    public Set<OrderItem> getItems() {
-        return items;
-    }
-
     public User getClient() {
         return client;
     }
 
     public void setClient(User client) {
         this.client = client;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    public Set<OrderItem> getItems() {
+        return items;
     }
 
     @Override
