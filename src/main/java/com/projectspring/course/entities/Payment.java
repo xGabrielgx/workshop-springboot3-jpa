@@ -1,5 +1,6 @@
 package com.projectspring.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -20,6 +21,7 @@ public class Payment implements Serializable {
 
 
     // associacao 1 para 1 (coloca na classe que é dependente)
+    @JsonIgnore
     @OneToOne
     @MapsId
     private Order order;
