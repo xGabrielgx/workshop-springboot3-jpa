@@ -15,10 +15,9 @@ nesse projeto utilizamos o JPA com H2 para fazer todo gerenciamento de banco de 
 - Java
 - Spring Boot
 - JPA / Hibernate
-- H2
 - Maven
-## Implantação em produção
-- Banco de dados: Postgresql
+## Banco de Dados
+- Banco de dados: H2 (para teste) / Postgresql
 
 # Autor
 
