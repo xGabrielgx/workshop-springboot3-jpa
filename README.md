@@ -8,7 +8,7 @@ nesse projeto utilizamos o JPA com H2 para fazer todo gerenciamento de banco de 
 
 
 ## Modelo conceitual
-![Modelo Conceitual]()
+![Modelo Conceitual](https://github.com/xGabrielgx/assets-project-springbott/blob/main/modelo-conceitual.png)
 
 # Tecnologias utilizadas
 ## Back end
