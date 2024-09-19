@@ -8,7 +8,7 @@ nesse projeto utilizamos o JPA com H2 para fazer todo gerenciamento de banco de 
 
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual]()
 
 # Tecnologias utilizadas
 ## Back end
