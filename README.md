@@ -4,7 +4,11 @@
 # Sobre o projeto
 
 É um projeto web services com Spring Boot e JPA / Hibernate onde estou aperfeiçoando os meus conhecimentos de java com o framework spring boot,
-nesse projeto utilizamos o JPA com H2 para fazer todo gerenciamento de banco de dados, é um projeto basicamente sobre compra de produtos, onde fazemos a injeção de dependência dentro mesmo do projeto.
+nesse projeto utilizamos o JPA com H2 para fazer todo gerenciamento de banco de dados. 
+
+E um projeto basicamente sobre compra de produtos, onde fazemos a injeção de dependência dentro mesmo do projeto.
+
+Também utilizo o postman para testar a API e simular as requisições HTTP.
 
 
 ## Modelo conceitual
